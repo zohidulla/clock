@@ -1,0 +1,245 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Rubik:wght@300;400;500;600;700;800;900&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Allura&family=Red+Hat+Text:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Koulen&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Days+One&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Rozha+One&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Federo&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Aboreto&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Nag+Mundari:wght@400;500;600;700&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Redressed&display=swap"); */
+
+html {
+  display: grid;
+  height: 100%;
+  /* font-family: ui-sans-serif, system-ui, sans-serif; */
+  /* font-family: "Roboto Mono", monospace; */
+  /* font-family: "Rubik", sans-serif; */
+  /* font-family: "Red Hat Text", sans-serif; */
+  /* font-family: "Alumni Sans", sans-serif; */
+  /* font-family: "Koulen", sans-serif; */
+  /* font-family: "Days One", sans-serif; */
+  /* font-family: "Rozha One", serif; */
+  /* font-family: "Federo", sans-serif; */
+  /* font-family: "Aboreto", sans-serif; */
+  /* font-family: "Aref Ruqaa", serif; */
+  /* font-family: "Agdasima", sans-serif; */
+  /* font-family: "Noto Sans Nag Mundari", sans-serif; */
+  /* font-family: "Besley", serif; */
+  font-family: "Dongle", sans-serif;
+  /* font-family: "Redressed", cursive; */
+}
+
+body {
+  background-image: linear-gradient(
+    175deg,
+    rgb(186, 185, 182),
+    rgb(110, 108, 105),
+    rgb(41, 40, 39)
+  );
+  padding-block-start: 2em;
+}
+
+p {
+  display: none;
+  text-align: center;
+}
+
+.clock {
+  --_ow: clamp(5rem, 60vw, 40rem);
+  --_w: 98cqi;
+  --_r: calc((var(--_w) - var(--_sz)) / 2);
+  --_sz: 20cqi;
+  background-color: #5a5b5c;
+  border: 40px solid #151617;
+  block-size: var(--_ow);
+  border-radius: 50%;
+  container-type: inline-size;
+  display: grid;
+  inline-size: var(--_ow);
+  margin-inline: auto;
+  place-content: center;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.clock-face {
+  aspect-ratio: 1;
+  background: var(--_bgc, #fff);
+  border-radius: 50%;
+  block-size: var(--_w);
+  font-size: 94px;
+  font-weight: 400;
+  list-style-type: none;
+  inline-size: var(--_w);
+  padding: unset;
+  position: relative;
+}
+
+.clock-face time {
+  --_x: calc(var(--_r) + (var(--_r) * cos(var(--_d))));
+  --_y: calc(var(--_r) + (var(--_r) * sin(var(--_d))));
+  display: grid;
+  height: var(--_sz);
+  left: var(--_x);
+  place-content: center;
+  position: absolute;
+  top: var(--_y);
+  width: var(--_sz);
+  margin-top: 7px;
+}
+
+.clock-face time:nth-child(1) {
+  --_d: 270deg;
+}
+.clock-face time:nth-child(2) {
+  --_d: 300deg;
+}
+.clock-face time:nth-child(3) {
+  --_d: 330deg;
+}
+.clock-face time:nth-child(4) {
+  --_d: 0deg;
+}
+.clock-face time:nth-child(5) {
+  --_d: 30deg;
+}
+.clock-face time:nth-child(6) {
+  --_d: 60deg;
+}
+.clock-face time:nth-child(7) {
+  --_d: 90deg;
+}
+.clock-face time:nth-child(8) {
+  --_d: 120deg;
+}
+.clock-face time:nth-child(9) {
+  --_d: 150deg;
+}
+.clock-face time:nth-child(10) {
+  --_d: 180deg;
+}
+.clock-face time:nth-child(11) {
+  --_d: 210deg;
+}
+.clock-face time:nth-child(12) {
+  --_d: 240deg;
+}
+
+.arm {
+  background-color: var(--_abg);
+  border-radius: calc(var(--_aw) * 2);
+  display: block;
+  height: var(--_ah);
+  left: calc((var(--_w) - var(--_aw)) / 2);
+  position: absolute;
+  top: calc((var(--_w) / 2) - var(--_ah));
+  transform: rotate(0deg);
+  transform-origin: bottom;
+  width: var(--_aw);
+}
+.seconds {
+  --_abg: red;
+  --_ah: 40cqi;
+  --_aw: 1cqi;
+  /* animation: turn 60s linear infinite; */
+  animation: turn 60s steps(60, end) infinite;
+  animation-delay: var(--_ds, 0ms);
+  z-index: 1111;
+}
+
+.minutes {
+  --_abg: #333;
+  --_ah: 35cqi;
+  --_aw: 2.5cqi;
+  animation: turn 3600s steps(60, end) infinite;
+  animation-delay: var(--_dm, 0ms);
+}
+
+.hours {
+  --_abg: #333;
+  --_ah: 30cqi;
+  --_aw: 2.5cqi;
+  animation: turn 43200s linear infinite; /* 60 seconds * 60 minutes * 12 hours */
+  animation-delay: var(--_dh, 0ms);
+  position: relative;
+}
+
+.hours::before {
+  background-color: #fff;
+  border: 1cqi solid #333;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 4cqi;
+  height: 4cqi;
+  bottom: -3cqi;
+  left: -1.75cqi;
+}
+
+.point {
+  position: absolute;
+  width: 4cqi;
+  height: 4cqi;
+  bottom: 302px;
+  left: 301px;
+  border-radius: 50%;
+  background: red;
+  z-index: 300;
+}
+
+@keyframes turn {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@supports not (left: calc(1px * cos(45deg))) {
+  time {
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) rotate(var(--_d)) translate(var(--_r))
+      rotate(calc(-1 * var(--_d)));
+  }
+  p {
+    display: block;
+  }
+}
+
+span {
+  display: block;
+  width: 3px;
+  height: 97%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  &::after {
+    content: "";
+    background-color: #5a5b5c;
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    top: 0;
+    left: 0;
+  }
+  &::before {
+    content: "";
+    background-color: #5a5b5c;
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    bottom: 0;
+    left: 0;
+  }
+
+  &.fives {
+    &::after,
+    &::before {
+      height: 20px;
+    }
+  }
+}
